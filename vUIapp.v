@@ -2,8 +2,8 @@ import ui
 import gx
 
 const (
-	win_width  = 250
-	win_height = 250
+	win_width  = 1920
+	win_height = 1080
 )
 
 struct App {
@@ -41,22 +41,22 @@ fn main() {
 							ui.DropdownItem{
 								text: 'Ethereum'
 							},
-														ui.DropdownItem{
+							ui.DropdownItem{
 								text: 'Fantom'
 							},
-														ui.DropdownItem{
+							ui.DropdownItem{
 								text: 'Harmony'
 							},
-														ui.DropdownItem{
+							ui.DropdownItem{
 								text: 'Huobi'
 							},
-														ui.DropdownItem{
+							ui.DropdownItem{
 								text: 'Polygon'
 							},
-														ui.DropdownItem{
+							ui.DropdownItem{
 								text: 'Solana'
 							},
-														ui.DropdownItem{
+							ui.DropdownItem{
 								text: 'xDai'
 							},
 						]
@@ -65,11 +65,11 @@ fn main() {
 			),
 			ui.row(
 				margin_: .3
-				widths: .4
-				heights: .4
+				widths: .1
+				heights: .1
 				bg_color: gx.rgba(255, 0, 0, 20)
 				children: [
-					ui.button(text: 'Add'),
+					ui.button(text: 'Search'),
 				]
 			),
 		]
