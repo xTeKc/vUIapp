@@ -11,15 +11,58 @@ mut:
 	window &ui.Window = 0
 }
 
+fn dd_change(mut app App, dd &ui.Dropdown) {
+	println(dd.selected().text)
+}
+
 fn main() {
 	mut app := &App{}
 	window := ui.window(
 		width: win_width
 		height: win_height
-		title: 'Resizable Window'
+		title: 'App Title'
 		resizable: true
 		state: app
 		children: [
+						ui.column(
+				margin: ui.Margin{5, 5, 5, 5}
+				children: [
+					ui.dropdown(
+						width: 140
+						def_text: 'Select a Blockchain'
+						on_selection_changed: dd_change
+												items: [
+							ui.DropdownItem{
+								text: 'Binance'
+							},
+							ui.DropdownItem{
+								text: 'Cardano'
+							},
+							ui.DropdownItem{
+								text: 'Ethereum'
+							},
+														ui.DropdownItem{
+								text: 'Fantom'
+							},
+														ui.DropdownItem{
+								text: 'Harmony'
+							},
+														ui.DropdownItem{
+								text: 'Huobi'
+							},
+														ui.DropdownItem{
+								text: 'Polygon'
+							},
+														ui.DropdownItem{
+								text: 'Solana'
+							},
+														ui.DropdownItem{
+								text: 'xDai'
+							},
+						]
+					),
+				]
+			),
 			ui.row(
 				margin_: .3
 				widths: .4
